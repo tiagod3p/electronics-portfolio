@@ -1,0 +1,20 @@
+{% extends 'layout.njk' %}
+{% block title %}
+<title>{{item.title}} - Tiago Vidal</title>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="wrapper">
+    <h1>{{item.title}}</h1>
+</div>
+
+
+<div class="card video" id="{{item.id}}">
+    <div class="card__video">
+        <iframe src="https://www.youtube.com/embed/{{item.id}}" frameborder="0"></iframe>
+    </div>
+
+
+{% endblock %}

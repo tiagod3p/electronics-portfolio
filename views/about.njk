@@ -1,0 +1,28 @@
+{% extends 'layout.njk' %}
+
+{% block title %}
+<title>Sobre - Tiago Vidal</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="wrapper">
+    <div class="photo">
+        <img src="https://avatars0.githubusercontent.com/u/62674726?s=460&u=1c4408eb9492a7bf31a18b0a17f8ed7c444ab56b&v=4" alt="Imagem de Tiago Vidal">
+    </div>
+
+    <div class="content">
+        <div class="info">
+            <h1> {{socials.name}} </h1>
+            <h2>{{socials.description}} </h2>
+        </div>
+
+        <div class="links">
+            {% for social in socials.links %}
+            <a href="{{social.url}}" target="_blank"><i class="{{social.icon}}" aria-hidden="true"></i></a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
